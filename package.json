@@ -1,0 +1,29 @@
+{
+  "name": "mina-adibe-package-demo",
+  "version": "1.0.0",
+  "description": "Test creating npm package with TypeScript",
+  "keywords": [
+    "demo",
+    "typescript"
+  ],
+  "homepage": "https://github.com/mina-adibe/npm-package-test",
+  "bugs": {
+    "url": "https://github.com/mina-adibe/npm-package-test/issues"
+  },
+  "author": "mina adibe ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mina-adibe/npm-package-test.git"
+  },
+    "scripts": {
+        "build": "tsc"
+    },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.6.3"
+  }
+}
