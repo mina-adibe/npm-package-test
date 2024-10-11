@@ -15,9 +15,7 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
 
-
     "module": "Preserve",
     "noEmit": true
-
   }
 }
