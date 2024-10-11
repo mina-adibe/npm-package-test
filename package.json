@@ -32,15 +32,15 @@
       "require": "./dist/index.js"
     }
   },
-  "engines": {
-    "node": ">=14"
-  },
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
   "type": "module",
   "license": "MIT",
+  "dependencies": {
+    "vite": "npm:vite@latest"
+  },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.4",
     "prettier": "^3.3.3",
