@@ -22,7 +22,7 @@
     "format": "npx prettier --write ./src .",
     "check-format": "npx prettier --check .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
-    "test": "npx vitest run --coverage --logLevel=debug",
+    "test": "npx vitest run --coverage ",
     "dev": "vitest",
     "local-release": "changeset version && changeset publish",
     "prepublishOnly": "npm run ci",
