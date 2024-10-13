@@ -17,21 +17,23 @@
   },
   "scripts": {
     "lint": "tsc",
-    "build": "tsup",
-    "ci": "npm run build && npm run format && npm run check-exports && npm run lint ",
-    "format": "npx prettier --write .",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "ci": "npm run build && npm run format && npm run check-exports && npm run lint && npm run test",
+    "format": "npx prettier --write ./src .",
     "check-format": "npx prettier --check .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "test": "vitest run",
     "dev": "vitest",
     "local-release": "changeset version && changeset publish",
-    "prepublishOnly": "npm run ci"
+    "prepublishOnly": "npm run ci",
+    "watch": "npm run build -- --watch src"
   },
   "exports": {
     "./package.json": "./package.json",
     ".": {
       "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
   },
   "main": "dist/index.js",
@@ -41,11 +43,16 @@
   "type": "module",
   "license": "MIT",
   "dependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
     "vite": "npm:vite@latest"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.16.4",
     "@changesets/cli": "^2.27.9",
+    "@testing-library/jest-dom": "^6.5.0",
+    "@testing-library/react": "^16.0.1",
+    "eslint-plugin-react": "^7.37.1",
+    "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
     "tsup": "^8.3.0",
     "typescript": "^5.6.3",
