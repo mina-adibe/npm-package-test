@@ -22,7 +22,7 @@
     "format": "npx prettier --write ./src .",
     "check-format": "npx prettier --check .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
-    "test": "vitest run",
+    "test": "npx vitest run  --coverage",
     "dev": "vitest",
     "local-release": "changeset version && changeset publish",
     "prepublishOnly": "npm run ci",
@@ -51,13 +51,14 @@
     "@changesets/cli": "^2.27.9",
     "@testing-library/jest-dom": "^6.5.0",
     "@testing-library/react": "^16.0.1",
+    "@types/node": "^22.7.5",
+    "@vitest/coverage-v8": "^2.1.2",
     "eslint-plugin-react": "^7.37.1",
     "jsdom": "^25.0.1",
     "prettier": "^3.3.3",
     "tsup": "^8.3.0",
     "typescript": "^5.6.3",
     "vite": "^5.4.8",
-    "vitest": "^2.1.2",
-    "@types/node": "^22.7.5"
+    "vitest": "^2.1.2"
   }
 }
