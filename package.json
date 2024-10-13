@@ -18,7 +18,7 @@
   "scripts": {
     "lint": "tsc",
     "build": "tsup src/index.ts --format cjs,esm --dts --clean",
-    "ci": "npm run build && npm run format && npm run check-exports && npm run lint && npm run test",
+    "ci": " npm run test && npm run build && npm run format && npm run check-exports && npm run lint ",
     "format": "npx prettier --write ./src .",
     "check-format": "npx prettier --check .",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
